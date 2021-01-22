@@ -473,11 +473,13 @@ aside{
   padding-right: 20px;
   margin: 0.5em
 }
-
 aside ul{
-  list-style: none;
   margin-left: -40px;
 }
+aside ul li{
+  list-style: none;
+}
+
 
 footer {
   width:100%;
