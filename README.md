@@ -1,4 +1,5 @@
 PROBLEMAS NO RESUELTOS: 
+
 No consigo eliminar el margen superior que aparece sobre el encabezado.
 
 No consigo adaptar la altura de la página al navegador.
