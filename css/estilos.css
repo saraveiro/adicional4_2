@@ -1,0 +1,287 @@
+@import url('normalize.css');
+body {
+   /*margin: 0 auto;*/
+  /* para eliminar margenes*/
+  margin: 0em;
+	padding: 0em; 
+  font-family: "Courier New", Courier, monospace;
+ /* height: 600px;
+  width: 1280px;
+  se pide que ocupe el 100%*/
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ /* para poner en mayúculas */ 
+  text-transform: capitalize;
+}
+p {
+  font-size: 0.8em;
+}
+li {
+  font-size: 0.6em;
+}
+ul {
+  font-size: 1.5em;
+  /* Del ejercicio 1 falta que los ul tengan como viñeta el círculo */
+  list-style-type: circle;
+}
+/* no necesitamos especificar el elemento body 
+body a:link{
+  color:black;
+}
+body p{
+  font: 0.8em;
+}
+body ul{
+  font: 0.8em;
+}*/
+a {
+  color: black;
+}
+a:hover {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+}
+/* HEADER */
+/* El orden en el que se colocan las reglas es muy importante ya que se tienen en cuenta siempre las más específicas 
+pero también el orden en que se colocan*/
+
+
+header {
+  /*eliminamos el margin y el padding*/
+  margin: 0;
+  padding: 0;
+  background-color: rgb(201, 192, 192);
+  --color-texto: #4E4A3D;
+}
+/* como manda modificar los colores ya te pongo un color adecuado para el 
+contraste de colores
+*/
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color-texto);
+}
+/*Tamaño de los h2 de la cabecera 1 vez el tamaño de la fuente*/
+header h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--color-texto);
+}
+
+/* MENU */
+nav{
+  width: 12%;
+  float:left;
+  text-align: center;
+  font-size: 1.2em;
+  border: rgb(105,105,105) 1px solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 0.5em;
+  border: 1px solid rgb(105, 105, 105); /*borde: tamaño tipo color*/
+}
+nav ul{
+  margin: auto 0px;
+  margin-left: -40px;
+ 
+}
+nav ul li {
+  list-style: none;
+ /* text-decoration: none; esto es para los enlaces */
+ /* line-height:40px;
+  border: #dddddd 1px solid;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  text-align: center;*/
+   /* elimino los margenes y padding. Centro el texto y añado un interlineado */
+  margin: 0em;
+  padding: 0em;
+  line-height: 2em;
+  color:black;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+	border-radius: 4px; /*Borde redondeado*/
+}
+/*
+nav ul li a:link {
+  list-style:none;
+  text-decoration: none;
+}*/
+
+nav ul li:hover {
+  list-style:none;
+  text-decoration: none;
+  background-color: #a9a9a9;
+  color:white;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: medium;
+}
+
+nav a:hover {
+  background-color: #a9a9a9;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0px;
+}
+
+
+/* CONTENT */
+
+
+#content {
+  margin-left: 30px;
+  width: 70%;
+  height: 90%;
+  float: left;
+}
+
+#content a:hover {
+  background-color: black;
+  color: white
+}
+#content p a:link {
+  font-style: italic;
+}
+#content ul{
+  list-style-type: circle;
+}
+
+#content p{
+  text-align: justify;
+}
+
+#content h2 + p {
+  font-weight: bold;
+}
+
+#content ul li{
+  line-height: 2em;;
+}
+
+#left {
+width: 49%;
+float: left;
+}
+
+#right {
+width: 49%;
+float: right;
+}
+
+/* ASIDE */
+aside{
+  width: 10%;
+  float:right;
+  background-color: rgba(220, 220, 220, 0.425);
+  line-height: 1.5em;
+  margin-right: 10px;
+  border: rgb(105,105,105) 1px solid;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0.5em
+}
+aside ul{
+  margin-left: -40px;
+}
+aside ul li{
+  list-style: none;
+}
+
+
+/* FOOTER */
+/*No están indicados todos los valores, el resto lo debes determinar tu viendo la imagen.*/
+footer {
+  width:100%;
+  height:5%;
+  background-color: lightgray;
+  /*Color: white;
+  PARA QUE no tengamos errores de contraste */
+   color: var(--color-texto);
+  clear: both;
+  height: 5%;
+  height:50px;
+}
+footer p {
+  font-weight:bold;
+  padding-left: 10px;
+}
+
+#copyright{
+  float: left;
+}
+
+#css{
+  float:right;
+  padding-right: 10px;
+}
+
+#css1{
+float:left;
+}
+
+#css2{
+float:right;
+}
+
+/* para responder a estas preguntas
+No consigo adaptar la altura de la página al navegador.
+
+El menú de sitios relacionados se descoloca al disminuir el tamaño de la pantalla. ¿Cómo se soluciona?
+
+tendremos que usar media queries para indicar un comportamiento para la página distinto dependiendo del tamaño de la pantalla
+ya que al tener 4 columnas no se adapta facilmente a una pantalla pequeña.
+Ejemplo 
+
+*/
+
+@media screen and (max-width: 820px ) {
+	#content {
+    width: 60%;
+    margin-left: 2em;
+	}
+
+	nav {
+		width: auto;
+    float: none;
+	}
+
+	nav li {
+		display: inline-block;
+		margin: 2px;
+    padding: 0;
+    border: 0;
+  }
+  nav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  aside {
+    width: 20%;
+  }
+
+	#left {
+		clear: both;
+		float: none;
+		width: auto;
+	}
+
+	#right {
+		clear: both;
+		float: none;
+		width: auto;
+	}
+	
+}
